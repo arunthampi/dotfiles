@@ -1,0 +1,228 @@
+set nocompatible                " choose no compatibility with legacy vi
+filetype off                    " required!
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" let Vundle manage Vundle
+" required! 
+Bundle 'gmarik/vundle'
+Bundle 'git://git.wincent.com/command-t.git'
+Bundle 'scrooloose/nerdtree'
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'mileszs/ack.vim'
+Bundle 'tpope/vim-fugitive'
+
+" color themes
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'jpo/vim-railscasts-theme'
+
+" languages
+Bundle 'tpope/vim-git'
+Bundle 'tpope/vim-bundler'
+
+Bundle 'vim-ruby/vim-ruby'
+Bundle 'tpope/vim-rails'
+Bundle 'skwp/vim-rspec'
+Bundle 'tpope/vim-cucumber'
+
+Bundle 'pangloss/vim-javascript'
+Bundle 'mmalecki/vim-node.js'
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'nono/jquery.vim'
+Bundle 'briancollins/vim-jst'
+
+Bundle 'othree/html5.vim'
+Bundle 'hail2u/vim-css3-syntax'
+Bundle 'ap/vim-css-color'
+Bundle 'cakebaker/scss-syntax.vim'
+Bundle 'groenewege/vim-less'
+Bundle 'wavded/vim-stylus'
+Bundle 'tpope/vim-haml'
+Bundle 'digitaltoad/vim-jade'
+Bundle 'nono/vim-handlebars'
+Bundle 'tpope/vim-liquid'
+
+Bundle 'msanders/cocoa.vim'
+
+Bundle 'bdd/vim-scala'
+
+Bundle 'tpope/vim-markdown'
+Bundle 'timcharper/textile.vim'
+
+Bundle 'vim-scripts/csv.vim'
+
+
+"------------------------------------------------------------------------------
+" Key Bindings
+" Map the Leader to , and remap ; to :
+"
+let mapleader = ","
+nnoremap ; :
+" Forcing me to use vim the right way
+nnoremap <up> <nop>
+nnoremap <down> <nop>
+nnoremap <left> <nop>
+nnoremap <right> <nop>
+inoremap <up> <nop>
+inoremap <down> <nop>
+inoremap <left> <nop>
+inoremap <right> <nop>
+nnoremap j gj
+nnoremap k gk
+
+" ,w is used to create a vertical split pane
+nnoremap <leader>w <C-w>v<C-w>l
+" ,h is used to create a horizontal split pane
+nnoremap <leader>h <C-w>s<C-w>l
+" Ctrl-h,j,k,l is used to move between panes
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
+" upper/lower word
+nmap <leader>u mQviwU`Q
+nmap <leader>l mQviwu`Q
+
+" upper/lower first char of word
+nmap <leader>U mQgewvU`Q
+nmap <leader>L mQgewvu`Q
+
+" To switch between the currently open buffer and the previous one
+nnoremap <leader><leader> <c-^>
+
+" Strip all trailing whitespaces in the current file
+nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
+
+" Escape to normal mode quickly
+inoremap jj <ESC>
+"------------------------------------------------------------------------------
+" set default color theme
+"
+colorscheme railscasts
+
+"------------------------------------------------------------------------------
+" basic
+"
+set number
+set ruler          " show line and column number
+syntax enable
+set encoding=utf-8
+set visualbell     " shut vim up
+set noerrorbells
+set nobackup
+
+"------------------------------------------------------------------------------
+" Whitespace
+"
+set nowrap                      " don't wrap lines
+set tabstop=2 shiftwidth=2      " a tab is two spaces (or set this to 4)
+set expandtab                   " use spaces, not tabs (optional)
+set backspace=indent,eol,start  " backspace through everything in insert mode
+
+set list
+set listchars=""          " reset listchars
+set listchars=tab:‣\      " display tabs with a sign
+set listchars+=trail:·    " display trailing whitespaces with a dot
+set listchars+=extends:»  " right wrap
+set listchars+=precedes:« " left wrap
+
+
+"------------------------------------------------------------------------------
+" Searching
+"
+set hlsearch                    " highlight matches
+set incsearch                   " incremental searching
+set ignorecase                  " searches are case insensitive...
+set smartcase                   " ... unless they contain at least one capital letter
+
+"------------------------------------------------------------------------------
+" wild
+"
+set wildmode=longest,list
+set wildignore+=*.o,*.out,*.obj,.git,*.rbc,*.rbo,*.class,.svn,*.gem
+set wildignore+=*.zip,*.tar.gz,*.tar.bz2,*.rar,*.tar.xz
+set wildignore+=*/vendor/gems/*,*/vendor/cache/*,*/.bundle/*,*/.sass-cache/*,*/vendor/bundle/*
+set wildignore+=*.swp,*~,._*
+
+"------------------------------------------------------------------------------
+" backup & swap
+"
+set backupdir=~/.vim/_backup// " backup
+set directory=~/.vim/_temp//   " swap
+
+"------------------------------------------------------------------------------
+" fugitive
+"
+nmap <leader>gb :Gblame<CR>
+nmap <leader>gs :Gstatus<CR>
+nmap <leader>gd :Gdiff<CR>
+nmap <leader>gl :Glog<CR>
+nmap <leader>gc :Gcommit<CR>
+nmap <leader>gp :Git push<CR>
+
+"------------------------------------------------------------------------------
+" nerdtree
+"
+let NERDTreeIgnore=['\.pyc$', '\.pyo$', '\.rbc$', '\.rbo$', '\.class$', '\.o$', '\~$']
+let NERDTreeHijackNetrw = 0
+
+augroup AuNERDTreeCmd
+autocmd AuNERDTreeCmd VimEnter * call s:CdIfDirectory(expand("<amatch>"))
+autocmd AuNERDTreeCmd FocusGained * call s:UpdateNERDTree()
+
+" If the parameter is a directory, cd into it
+function s:CdIfDirectory(directory)
+  let explicitDirectory = isdirectory(a:directory)
+  let directory = explicitDirectory || empty(a:directory)
+
+  if explicitDirectory
+    exe "cd " . fnameescape(a:directory)
+  endif
+
+  " Allows reading from stdin
+  " ex: git diff | mvim -R -
+  if strlen(a:directory) == 0
+    return
+  endif
+
+  if directory
+    NERDTree
+    wincmd p
+    bd
+  endif
+
+  if explicitDirectory
+    wincmd p
+  endif
+endfunction
+
+" NERDTree utility function
+function s:UpdateNERDTree(...)
+  let stay = 0
+
+  if(exists("a:1"))
+    let stay = a:1
+  end
+
+  if exists("t:NERDTreeBufName")
+    let nr = bufwinnr(t:NERDTreeBufName)
+    if nr != -1
+      exe nr . "wincmd w"
+      exe substitute(mapcheck("R"), "<CR>", "", "")
+      if !stay
+        wincmd p
+      end
+    endif
+  endif
+endfunction
+
+" nerd tree
+map <leader>n :NERDTreeToggle<CR>
+
+" nerd commenter
+map <leader>/ <plug>NERDCommenterToggle<CR>
+
+" ack shortcut
+nnoremap <leader>a :Ack
