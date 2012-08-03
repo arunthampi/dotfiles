@@ -2,4 +2,5 @@
 home/vim/bundle
 home/vim/_temp
 home/vim/_backup
+.netrwhist
 
