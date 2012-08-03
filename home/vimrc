@@ -16,6 +16,9 @@ Bundle 'tpope/vim-fugitive'
 " color themes
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'jpo/vim-railscasts-theme'
+Bundle 'fugalh/desert.vim'
+Bundle 'nanotech/jellybeans.vim'
+Bundle 'tomasr/molokai'
 
 " languages
 Bundle 'tpope/vim-git'
@@ -100,7 +103,7 @@ inoremap jj <ESC>
 "------------------------------------------------------------------------------
 " set default color theme
 "
-colorscheme railscasts
+colorscheme desert
 
 "------------------------------------------------------------------------------
 " basic
