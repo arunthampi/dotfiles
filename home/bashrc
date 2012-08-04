@@ -38,3 +38,6 @@ eval "$(rbenv init -)"
 
 # JRUBY Options
 export JRUBY_OPTS=--1.9
+
+# tmux
+alias tmux="TERM=screen-256color-bce tmux"
