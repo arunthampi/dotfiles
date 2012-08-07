@@ -1,0 +1,8 @@
+#!/bin/bash
+
+if [ "$1" == "" -o "$2" == "" -o "$3" == "" -o "$4" == "" ]; then
+  echo "Usage: tunnel <host> <ssh_port> <local_port> <destination_port>"
+else
+  ssh $1 -p $2 -f -N -L $3:127.0.0.1:$4
+  echo "Created tunnel with this command: ssh $1 -p $2 -f -N -L $3:127.0.0.1:$4"
+fi
