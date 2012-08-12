@@ -7,7 +7,7 @@ call vundle#rc()
 " let Vundle manage Vundle
 " required! 
 Bundle 'gmarik/vundle'
-Bundle 'git://git.wincent.com/command-t.git'
+Bundle 'wincent/Command-T'
 Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'mileszs/ack.vim'
@@ -54,6 +54,12 @@ Bundle 'tpope/vim-markdown'
 Bundle 'timcharper/textile.vim'
 
 Bundle 'vim-scripts/csv.vim'
+
+" pete --------------
+Bundle 'fholgado/minibufexpl.vim'
+Bundle 'vim-scripts/bufkill.vim'
+
+" -----------
 
 
 "------------------------------------------------------------------------------
@@ -229,3 +235,40 @@ map <leader>/ <plug>NERDCommenterToggle<CR>
 
 " ack shortcut
 nnoremap <leader>a :Ack
+
+" -- pete
+
+map <C-c> <ESC>
+
+map <leader>] :tabn<CR>
+map <leader>[ :tabp<CR>
+
+nmap <leader>; :bp<CR>
+nmap <leader>' :bn<CR>
+
+" much more natural cursor movement when wrapping lines are present
+map j gj
+map k gk
+map <Down> gj
+map <Up> gk
+
+" command-t
+map <C-t> :CommandTFlush<CR>:CommandT<CR>
+imap <C-t> <ESC>:CommandTFlush<CR>:CommandT<CR>
+map <leader>t :CommandTFlush<CR>:CommandT<CR>
+let CommandTMaxHeight=10
+
+" Some helpers to edit mode
+" http://vimcasts.org/e/14
+cnoremap %% <C-R>=expand('%:h').'/'<cr>
+map <leader>ew :e %%
+map <leader>es :sp %%
+map <leader>ev :vsp %%
+map <leader>et :tabe %%
+
+let g:solarized_termcolors=256
+let g:solarized_termtrans=1
+let g:solarized_visibility="high"
+set background=dark
+colorscheme solarized
+
