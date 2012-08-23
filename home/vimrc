@@ -5,7 +5,7 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 " let Vundle manage Vundle
-" required! 
+" required!
 Bundle 'gmarik/vundle'
 Bundle 'wincent/Command-T'
 Bundle 'scrooloose/nerdtree'
@@ -109,8 +109,6 @@ inoremap jj <ESC>
 "------------------------------------------------------------------------------
 " set default color theme
 "
-colorscheme desert
-
 "------------------------------------------------------------------------------
 " basic
 "
@@ -136,7 +134,6 @@ set listchars=tab:‣\      " display tabs with a sign
 set listchars+=trail:·    " display trailing whitespaces with a dot
 set listchars+=extends:»  " right wrap
 set listchars+=precedes:« " left wrap
-
 
 "------------------------------------------------------------------------------
 " Searching
@@ -271,4 +268,9 @@ let g:solarized_termtrans=1
 let g:solarized_visibility="high"
 set background=dark
 colorscheme solarized
+
+
+if has("autocmd")
+  au FileType scala set tabstop=2 shiftwidth=2 expandtab
+endif
 

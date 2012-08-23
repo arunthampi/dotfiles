@@ -13,3 +13,5 @@
   br = branch
   llog = log --date=local
 
+[heroku]
+	account = work
