@@ -51,8 +51,6 @@ Bundle 'tpope/vim-liquid'
 
 Bundle 'msanders/cocoa.vim'
 
-Bundle 'bdd/vim-scala'
-
 Bundle 'tpope/vim-markdown'
 Bundle 'timcharper/textile.vim'
 
