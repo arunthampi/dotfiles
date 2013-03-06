@@ -31,8 +31,6 @@ export PS1='\u:\[\033[31;40m\]\w\[\033[0;33m\]$(parse_git_branch)\[\e[0m\]$ '
 
 . ~/.nvm/nvm.sh
 
-export SECRET_TOKEN='9ebf3be161d3247e28e441a394507b1ace7729e411928410a12049ca5bb746aa309135f3275fbad930d8fc261f86265296340912ce2e97ea57cb01e9f2711671'
-
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
