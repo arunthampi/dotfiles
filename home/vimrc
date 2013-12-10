@@ -340,3 +340,5 @@ let g:syntastic_auto_loc_list=2
 " ack on ubuntu
 let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 
+" gitcommit
+autocmd Filetype gitcommit setlocal spell textwidth=72
