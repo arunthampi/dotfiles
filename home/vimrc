@@ -25,7 +25,6 @@ Bundle 'nathanaelkane/vim-indent-guides'
 
 " languages
 Bundle 'tpope/vim-git'
-Bundle 'tpope/vim-bundler'
 
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'tpope/vim-rails'
