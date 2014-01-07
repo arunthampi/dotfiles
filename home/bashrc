@@ -2,6 +2,10 @@ export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 export CLICOLOR=1
 export EDITOR=vim
+export GOPATH=$HOME/.go
+
+# mk gopath
+mkdir -p $HOME/.go
 
 # Git Stuff
 alias gst='git status'
@@ -22,3 +26,10 @@ export PS1='\u:\[\033[31;40m\]\w\[\033[0;33m\]$(parse_git_branch)\[\e[0m\]$ '
 
 # tmux
 alias tmux="TERM=screen-256color-bce tmux"
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+export SSL_CERT_FILE=$HOME:.rvm/opt/curl-ca-bundle/share/ca-bundle.crt
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$GOPATH/bin:$PATH:$HOME/.rvm/bin"
