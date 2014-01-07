@@ -14,7 +14,7 @@ Bundle 'mileszs/ack.vim'
 Bundle 'tpope/vim-fugitive'
 
 " color themes
-Bundle 'altercation/vim-colors-solarized'
+Bundle 'arunthampi/vim-colors-solarized'
 Bundle 'jpo/vim-railscasts-theme'
 Bundle 'fugalh/desert.vim'
 Bundle 'nanotech/jellybeans.vim'
