@@ -54,9 +54,8 @@ Bundle 'msanders/cocoa.vim'
 Bundle 'tpope/vim-markdown'
 Bundle 'timcharper/textile.vim'
 
-Bundle 'petejkim/go.vim'
-
-
+Bundle 'jnwhiteh/vim-golang'
+Bundle 'Blackrush/vim-gocode'
 
 Bundle 'vim-scripts/csv.vim'
 
@@ -177,6 +176,11 @@ set wildignore+=*/tmp/**
 "
 set backupdir=~/.vim/_backup// " backup
 set directory=~/.vim/_temp//   " swap
+
+"-----------------------------------------------------------------------------
+" omnifunc
+"
+set omnifunc=syntaxcomplete#Complete
 
 "------------------------------------------------------------------------------
 " fugitive
@@ -306,7 +310,8 @@ function! s:setupWrapping()
   set nolist
 endfunction
 
-filetype plugin indent on " Turn on filetype plugins (:help filetype-plugin)
+filetype plugin on " Turn on filetype plugins (:help filetype-plugin)
+filetype plugin indent on
 
 " In Makefiles, use real tabs, not tabs expanded to spaces
 au FileType make set noexpandtab
