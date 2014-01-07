@@ -339,7 +339,7 @@ au BufNewFile,BufRead *.hamlc,*.hbs.haml set filetype=haml
 "
 " https://github.com/carlhuda/janus/blob/master/janus/vim/tools/janus/after/plugin/syntastic.vim
 let g:syntastic_enable_signs=1
-let g:syntastic_quiet_warnings=0
+let g:syntastic_quiet_messages = {'level': 'warnings'}
 let g:syntastic_auto_loc_list=2
 
 " ack on ubuntu
