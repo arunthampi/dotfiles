@@ -29,7 +29,7 @@ alias tmux="TERM=screen-256color-bce tmux"
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
-export SSL_CERT_FILE=$HOME:.rvm/opt/curl-ca-bundle/share/ca-bundle.crt
+# export SSL_CERT_FILE=$HOME:.rvm/opt/curl-ca-bundle/share/ca-bundle.crt
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$GOPATH/bin:$PATH:$HOME/.rvm/bin"
