@@ -12,6 +12,7 @@ alias gst='git status'
 alias gco='git checkout'
 alias vimbi='vim +BundleInstall +qall'
 alias bi='bundle install'
+alias zt='zeus test'
 
 # Git Prompt
 function parse_git_dirty {
