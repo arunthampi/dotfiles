@@ -28,9 +28,9 @@ export PS1='\u:\[\033[31;40m\]\w\[\033[0;33m\]$(parse_git_branch)\[\e[0m\]$ '
 # tmux
 alias tmux="TERM=screen-256color-bce tmux"
 
-PATH=$PATH:$HOME/.rvm/bin:bin # Add RVM to PATH for scripting
+# PATH=$PATH:$HOME/.rvm/bin:bin # Add RVM to PATH for scripting
 
 # export SSL_CERT_FILE=$HOME:.rvm/opt/curl-ca-bundle/share/ca-bundle.crt
 
 ### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$GOPATH/bin:$PATH:$HOME/.rvm/bin"
+# export PATH="/usr/local/heroku/bin:$GOPATH/bin:$PATH:$HOME/.rvm/bin"
