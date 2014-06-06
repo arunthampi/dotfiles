@@ -5,5 +5,20 @@
 --type-set=markdown=.markdown,.md,.mdown
 --type-set=cucumber=.feature
 --type-set=config=.conf,.ini,.cfg
---ignore-file=match:^(?!vendor|node_modules|log|tmp|doc|coverage).*$
+--type-set=bin=.idx,.pack,.sqlite3,.sqlite3-journal,.rdb,.swf,.gif,.png,.ico,.jpg,.jpeg,.tiff,.pdf,.mp3,.JPG,.sqlite,.dat,.crt
+
+--ignore-dir=public/assets
+--ignore-dir=db/migrate
+--ignore-dir=public/swfs
+--ignore-dir=gems
+--ignore-dir=plugins
+--ignore-dir=rails
+--ignore-dir=log
+--ignore-dir=tmp
+--ignore-dir=scratch_directory
+--ignore-dir=cache
+--ignore-dir=node_modules
+--ignore-dir=doc
+
+--no-bin
 
