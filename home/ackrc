@@ -5,5 +5,5 @@
 --type-set=markdown=.markdown,.md,.mdown
 --type-set=cucumber=.feature
 --type-set=config=.conf,.ini,.cfg
--G^(?!vendor|node_modules|log|tmp|doc|coverage).*$
+--ignore-file=match:^(?!vendor|node_modules|log|tmp|doc|coverage).*$
 
