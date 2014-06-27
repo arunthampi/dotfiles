@@ -290,6 +290,7 @@ map <leader>et :tabe %%
 let g:solarized_termcolors=256
 let g:solarized_termtrans=1
 let g:solarized_visibility="high"
+let g:gofmt_command = "goimports"
 set background=dark
 colorscheme solarized
 
