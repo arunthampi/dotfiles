@@ -32,9 +32,9 @@ function bootstrap_go_project() {
     return
   fi
 
-  dir=$GOPATH/src/$1/$2
+  dir=$GOPATH/src/github.com/$1/$2
   symlinked_target=$HOME/workspace/$2
-  mkdir -p $GOPATH/src/$1/$2
+  mkdir -p $dir
   echo Created ${dir}
 
   ln -sf ${dir} ${symlinked_target}
