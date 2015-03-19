@@ -8,7 +8,6 @@ alias gst='git status'
 alias gco='git checkout'
 alias vimbi='vim +BundleInstall +qall'
 alias bi='bundle install'
-alias zt='zeus test'
 alias ge='goop exec'
 
 # Git Prompt
@@ -24,6 +23,21 @@ export PS1='\u:\[\033[31;40m\]\w\[\033[0;33m\]$(parse_git_branch)\[\e[0m\]$ '
 
 # tmux
 alias tmux="TERM=screen-256color-bce tmux"
+
+# Parallels
+alias prlstart="prlctl start 'Ubuntu Linux'"
+alias prlstop="prlctl stop 'Ubuntu Linux'"
+
+export GOPATH=~/workspace/gospace
+export GOBIN=$GOPATH/bin
+export PATH=node_modules/.bin:.bundle/binstubs:$PATH:$GOBIN
+
+source ~/.rvm/scripts/rvm
+
+# To make sure rake is the same as the one used by bundler
+# use: http://stackoverflow.com/questions/23287357/already-activated-rake-version-different-than-what-gemfile-requires-prevents-rak
+# $ gem install rubygems-bundler
+# $ gem regenerate_binstubs
 
 function bootstrap_go_project() {
   if [ $# -ne 2 ]
