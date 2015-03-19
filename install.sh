@@ -8,8 +8,8 @@
 ########## Variables
 
 dir=~/workspace/dotfiles                # dotfiles directory
-olddir=~/dotfiles_old             # old dotfiles backup directory
-home_files="bashrc vimrc gvimrc ackrc vim bundle irbrc gitconfig tmux.conf"    # list of files/folders to symlink in homedir
+olddir=~/dotfiles_old                   # old dotfiles backup directory
+home_files="bashrc vimrc gvimrc ackrc vim bundle/config irbrc gitconfig tmux.conf"    # list of files/folders to symlink in homedir
 
 ##########
 
