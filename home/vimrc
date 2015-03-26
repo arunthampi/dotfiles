@@ -12,6 +12,7 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'mileszs/ack.vim'
 Bundle 'tpope/vim-fugitive'
+Bundle 'rizzatti/dash.vim'
 
 " color themes
 Bundle 'arunthampi/vim-colors-solarized'
