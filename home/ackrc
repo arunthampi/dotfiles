@@ -19,6 +19,7 @@
 --ignore-dir=cache
 --ignore-dir=node_modules
 --ignore-dir=doc
+--ignore-dir=.bundle
 
 --no-bin
 
