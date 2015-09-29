@@ -203,6 +203,9 @@ augroup AuNERDTreeCmd
 autocmd AuNERDTreeCmd VimEnter * call s:CdIfDirectory(expand("<amatch>"))
 autocmd AuNERDTreeCmd FocusGained * call s:UpdateNERDTree()
 
+" Strip trailing whitespace
+autocmd BufWritePre * :%s/\s\+$//e
+
 " If the parameter is a directory, cd into it
 function s:CdIfDirectory(directory)
   let explicitDirectory = isdirectory(a:directory)
