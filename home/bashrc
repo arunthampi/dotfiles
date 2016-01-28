@@ -9,6 +9,8 @@ alias gco='git checkout'
 alias vimbi='vim +BundleInstall +qall'
 alias bi='bundle install'
 alias ge='goop exec'
+alias ls='mc ls'
+alias cp='mc cp'
 
 # Git Prompt
 function parse_git_dirty {
