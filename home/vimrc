@@ -346,6 +346,7 @@ au BufNewFile,BufRead *.hamlc,*.hbs.haml set filetype=haml
 let g:syntastic_enable_signs=1
 let g:syntastic_quiet_messages = {'level': 'warnings'}
 let g:syntastic_auto_loc_list=2
+let g:syntastic_javascript_checkers = ['jshint']
 
 " ack on ubuntu
 let g:ackprg="ack-grep -H --nocolor --nogroup --column"
