@@ -33,7 +33,7 @@ alias prlstop="prlctl stop 'Ubuntu Linux'"
 
 export GOPATH=~/workspace/gospace
 export GOBIN=$GOPATH/bin
-export PATH=node_modules/.bin:.bundle/binstubs:$PATH:$GOBIN
+export PATH=$HOME/anaconda3/bin:node_modules/.bin:.bundle/binstubs:.bundle.jruby/binstubs:$PATH:$GOBIN:~/workspace/nestor-cli/build:~/workspace/nestor-debugger/build:~/workspace/relax/build
 
 source ~/.rvm/scripts/rvm
 
