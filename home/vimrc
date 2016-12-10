@@ -59,6 +59,7 @@ Bundle 'jnwhiteh/vim-golang'
 Bundle 'Blackrush/vim-gocode'
 
 Bundle 'vim-scripts/csv.vim'
+Bundle 'posva/vim-vue'
 
 " pete --------------
 Bundle 'fholgado/minibufexpl.vim'
@@ -347,7 +348,7 @@ let g:syntastic_enable_signs=1
 let g:syntastic_quiet_messages = {'level': 'warnings'}
 let g:syntastic_auto_loc_list=2
 " https://github.com/jaxbot/syntastic-react
-let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_javascript_checkers = ['jshint']
 
 " ack on ubuntu
 let g:ackprg="ack-grep -H --nocolor --nogroup --column"
