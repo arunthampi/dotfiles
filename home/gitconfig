@@ -15,3 +15,5 @@
 
 [heroku]
 	account = work
+[push]
+	default = matching
