@@ -7,9 +7,6 @@ export EDITOR=vim
 alias gst='git status'
 alias gco='git checkout'
 alias vimbi='vim +BundleInstall +qall'
-alias bi='bundle install'
-alias ge='goop exec'
-alias nestoryolo='npm update nestorbot && git add . && git commit -m "update nestorbot" && git push origin master && nestor save && nestor deploy --latest'
 
 # Git Prompt
 function parse_git_dirty {
