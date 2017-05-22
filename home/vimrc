@@ -62,6 +62,9 @@ Bundle 'Blackrush/vim-gocode'
 Bundle 'vim-scripts/csv.vim'
 Bundle 'posva/vim-vue'
 
+" elixir
+Bundle 'elixir-lang/vim-elixir'
+
 " pete --------------
 Bundle 'fholgado/minibufexpl.vim'
 Bundle 'vim-scripts/bufkill.vim'
