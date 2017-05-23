@@ -26,10 +26,8 @@ alias tmux="TERM=screen-256color-bce tmux"
 alias prlstart="prlctl start 'Ubuntu Linux'"
 alias prlstop="prlctl stop 'Ubuntu Linux'"
 
-export GOPATH=~/workspace/gospace
-export GOBIN=$GOPATH/bin
 export ANDROID_HOME=~/Library/Android/sdk
-export PATH=$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools:$HOME/anaconda3/bin:node_modules/.bin:.bundle/binstubs:.bundle.jruby/binstubs:$PATH:$GOBIN:~/workspace/nestor-cli/build:~/workspace/nestor-debugger/build:~/workspace/relax/build
+export PATH=$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools:$HOME/anaconda3/bin:node_modules/.bin:.bundle/binstubs:.bundle.jruby/binstubs:$PATH:$GOBIN:~/workspace/nestor-cli/build:~/workspace/nestor-debugger/build:~/workspace/relax/build:~/go/bin
 
 source ~/.rvm/scripts/rvm
 
@@ -45,7 +43,7 @@ function bootstrap_go_project() {
     return
   fi
 
-  dir=$GOPATH/src/github.com/$1/$2
+  dir=~/go/src/github.com/$1/$2
   symlinked_target=$HOME/workspace/$2
   mkdir -p $dir
   echo Created ${dir}
